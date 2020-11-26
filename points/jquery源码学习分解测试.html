@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+var class2type = {};
+
+var toString = class2type.toString;
+// 返回变量类型
+function toType( obj ) {
+	if ( obj == null ) {
+		return obj + "";
+	}
+
+	// Support: Android <=2.3 only (functionish RegExp)
+	return typeof obj === "object" || typeof obj === "function" ?
+		class2type[ toString.call( obj ) ] || "object" :
+		typeof obj;
+}
+
+console.log('array', toType([]))
+console.log('object', toType({}))
+console.log('date', toType(new Date()))
+console.log('RegExp', toType(new RegExp()), (new RegExp()).toString(), typeof (new RegExp()), typeof /\s/)
+console.log('array', Object.prototype.toString.call([]), [].toString())   // [object Array]  ''
+</script>
+</html>

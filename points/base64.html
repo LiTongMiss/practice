@@ -1,0 +1,22 @@
+<script>
+    // let str = 'gbjkbnjnl'
+    // let enCode = window.btoa(str)
+    // let deCode = window.atob(enCode)
+
+    // console.log(str, enCode,deCode)
+
+    // let str = '{"id":88,"userName":null,"name":"1","mobile":"18501944515","logo":null,"mail":"456454@qq.com","remark":null,"areaCode":null,"addr":null,"stateName":"0","sourceType":"APP","createTime":"2020-03-31 02:04:06","modifyTime":"2020-03-31 02:06:04","accessToken":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzb3VyY2VUeXBlIjoiMjk4ZDg5MjM2NGM5Nzg1ZjIwY2VkOTg5NWFiNGVjNTciLCJuYW1lIjoiNWFjOGFlYzUwYjVmZmZmNjgwYjdiNTJkZmYzN2MwZDEiLCJ1c2VyVHlwZSI6Ijg1MGVkNGU4NTAzNDBhM2ViZjg4OGI0MDgwZjk2NDViIiwiZXhwIjoxNTg4MjE0OTY3LCJpYXQiOjE1ODU2MjI5NjcsImp0aSI6ImY3OTA0Y2U4LTc5NzUtNGFmNC05ZWMwLTE5MDJiZDUzZjlmMiJ9.K_12VS_3Sw8qQogd2Bcb2se3xPwDgues5DEo1QsnP5E"}'
+    // let enCode = window.btoa(str)
+    // let deCode = window.atob(enCode)
+    // console.log(str, enCode,deCode)
+
+    // base64无法编译中文，需要用encodeURIComponent转码
+    // let str = '{"name": "中文", age: 33}'
+    let str = '{"id":88,"userName":null,"name":"妮妮1","mobile":"18501944515","logo":null,"mail":"456454@qq.com","remark":null,"areaCode":null,"addr":null,"stateName":"正常","sourceType":"APP","createTime":"2020-03-31 02:04:06","modifyTime":"2020-03-31 02:06:04","accessToken":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzb3VyY2VUeXBlIjoiMjk4ZDg5MjM2NGM5Nzg1ZjIwY2VkOTg5NWFiNGVjNTciLCJuYW1lIjoiNWFjOGFlYzUwYjVmZmZmNjgwYjdiNTJkZmYzN2MwZDEiLCJ1c2VyVHlwZSI6Ijg1MGVkNGU4NTAzNDBhM2ViZjg4OGI0MDgwZjk2NDViIiwiZXhwIjoxNTg4MjE0OTY3LCJpYXQiOjE1ODU2MjI5NjcsImp0aSI6ImY3OTA0Y2U4LTc5NzUtNGFmNC05ZWMwLTE5MDJiZDUzZjlmMiJ9.K_12VS_3Sw8qQogd2Bcb2se3xPwDgues5DEo1QsnP5E"}'
+    console.log('encodeURIComponent(str)', encodeURIComponent(str))
+    let enCode = window.btoa(encodeURIComponent(str))
+    let deCode = decodeURIComponent(window.atob(enCode))
+    console.log('str',str)
+    console.log('enCode', enCode)
+    console.log('deCode', deCode)
+</script>
