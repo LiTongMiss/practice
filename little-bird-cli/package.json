@@ -1,0 +1,29 @@
+{
+  "name": "little-bird-cli",
+  "version": "1.0.0",
+  "description": "CLI 全称 command-line interface，也就是命令行界面\r 前端脚手架CLI，是一个命令行工具，它的出现主要解决这几个问题：\r 减少重复性工作\r 规范项目开发目录结构\r 统一团队开发风格，便于跨团队合作，以及后期维护，降低新人上手成本\r 提供意见前端项目的下黄健、配置、本地开发、插件扩展等功能，让开发者更多时间专注于业务",
+  "main": "index.js",
+  "scripts": {
+    "compile": "babel src -d dist",
+    "watch": "npm run compile -- --watch"
+  },
+  "bin": {
+    "little-bird-cli": "./bin/cmd",
+    "lb-cli": "./bin/cmd",
+    "lbc": "./bin/cmd"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "chalk": "^4.1.0",
+    "commander": "^7.1.0",
+    "download-git-repo": "^3.0.2",
+    "inquirer": "^8.0.0",
+    "log-symbols": "^4.0.0",
+    "open-browser-webpack-plugin": "0.0.5",
+    "ora": "^5.3.0",
+    "webpack": "^5.25.0",
+    "webpack-dev-server": "^3.11.2"
+  }
+}
